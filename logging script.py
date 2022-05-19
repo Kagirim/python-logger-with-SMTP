@@ -36,7 +36,7 @@ class TlsSMTPHandler(logging.handlers.SMTPHandler):
             smtp.quit()
 
         # quit script if user presses any key
-        except (keyboardInterrupt, SystemExit):
+        except (KeyboardInterrupt, SystemExit):
             raise
         except:
             self.handleError(record)
